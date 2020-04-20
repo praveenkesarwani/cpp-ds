@@ -1,0 +1,26 @@
+/*
+Check Palindrome (recursive)
+
+Check if a given String S is palindrome or not (using recursion). Return true or false.
+
+*/
+#include<bits/stdc++.h>
+using namespace std;
+bool palindrome(string s, int startIndex, int endIndex){
+    if(startIndex >= endIndex){
+        return true;
+    }
+    if(s[startIndex] == s[endIndex]){
+        return palindrome(s,startIndex + 1,endIndex-1);
+    }
+    return false;
+}
+bool palindrome(string s){
+    return palindrome(s, 0, s.size() - 1);
+    
+}
+int main(){
+    string s;
+    cin>>s;
+    cout<<palindrome(s);
+}
