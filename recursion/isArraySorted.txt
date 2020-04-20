@@ -20,12 +20,5 @@ int main()
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    bool ans = isSorted(arr, n);
-    switch(ans){
-        case 0:
-            cout<<"Not Sorted";
-            break;
-        case 1:
-            cout<<"Sorted";
-    }
+    cout<<isSorted(arr,n);
 }
